@@ -23,6 +23,13 @@ const projects = [
     link: "https://elegancemoda.netlify.app",
   },
   {
+    id: 3,
+    title: "Pistache Granel",
+    description: "Landing Page de informações especializado em pistaches e produtos a granel de alta qualidade",
+    image: "/images/pistache.png",
+    link: "https://pistachepage.netlify.app",
+  },
+  {
     id: 4,
     title: "DisasterReport",
     description: "Plataforma para relatório e monitoramento de desastres naturais",

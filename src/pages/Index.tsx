@@ -8,21 +8,36 @@ import { FAQ } from "@/components/FAQ";
 import { Portfolio } from "@/components/Portfolio";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Footer } from "@/components/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
   return (
-    <main className="bg-background text-foreground">
-      <Hero />
-      <About />
-      <Features />
-      <Portfolio />
-      <Reasons />
-      <Stats />
-      <Contact />
-      <FAQ />
-      <WhatsAppButton />
-      <Footer />
-    </main>
+    <>
+      <Helmet>
+        <title>Inova Creator Hub - Plataforma de Inovação e Criação</title>
+        <meta name="description" content="Descubra o Inova Creator Hub - sua plataforma completa para inovação e desenvolvimento de projetos criativos. Conecte-se com criadores, desenvolva ideias e transforme sua visão em realidade." />
+        <meta name="keywords" content="inovação, criatividade, hub de criadores, desenvolvimento de projetos, tecnologia, colaboração" />
+        <meta property="og:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
+        <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
+        <meta name="twitter:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
+        <link rel="canonical" href={window.location.href} />
+      </Helmet>
+      <main className="bg-background text-foreground">
+        <Hero />
+        <About />
+        <Features />
+        <Portfolio />
+        <Reasons />
+        <Stats />
+        <Contact />
+        <FAQ />
+        <WhatsAppButton />
+        <Footer />
+      </main>
+    </>
   );
 };
 
