@@ -21,18 +21,34 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/50">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.8
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-light opacity-90" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sobre Nós
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-secondary via-accent to-primary text-transparent bg-clip-text">
+              Sobre Nós
+            </span>
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
             Somos uma equipe apaixonada por criar experiências digitais extraordinárias. 
             Na inova.js, combinamos criatividade com tecnologia de ponta para entregar 
             soluções que impulsionam o sucesso dos nossos clientes.
@@ -48,11 +64,11 @@ export const About = () => {
               transition={{ delay: index * 0.2 }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-              <div className="relative bg-gray-900/60 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-primary/50 transition-colors">
-                <service.icon className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary rounded-xl opacity-0 group-hover:opacity-10 blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-background-light/10 backdrop-blur-sm p-8 rounded-xl border border-accent/20 transform group-hover:-translate-y-1 transition-all duration-300">
+                <service.icon className="w-12 h-12 text-secondary mb-6" />
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{service.description}</p>
               </div>
             </motion.div>
           ))}

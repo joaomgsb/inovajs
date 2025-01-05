@@ -25,22 +25,42 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#10B981",
+          DEFAULT: "#3B82F6", 
+          light: "#60A5FA",
+          dark: "#2563EB",
           foreground: "#FFFFFF",
-          hover: "#059669",
         },
         secondary: {
-          DEFAULT: "#1F2937",
-          foreground: "#F9FAFB",
+          DEFAULT: "#EC4899", 
+          light: "#F472B6",
+          dark: "#DB2777",
+          foreground: "#FFFFFF",
+        },
+        accent: {
+          DEFAULT: "#8B5CF6", 
+          light: "#A78BFA",
+          dark: "#7C3AED",
+          foreground: "#FFFFFF",
+        },
+        success: {
+          DEFAULT: "#10B981", 
+          light: "#34D399",
+          dark: "#059669",
+        },
+        background: {
+          light: "#1F2937",
+          DEFAULT: "#111827",
+          dark: "#030712",
         },
         muted: {
           DEFAULT: "#374151",
           foreground: "#9CA3AF",
         },
-        accent: {
-          DEFAULT: "#4F46E5",
-          foreground: "#FFFFFF",
-        },
+        gradient: {
+          primary: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
+          secondary: "linear-gradient(135deg, #1F2937 0%, #111827 100%)",
+          accent: "linear-gradient(135deg, #4F46E5 0%, #4338CA 100%)",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
