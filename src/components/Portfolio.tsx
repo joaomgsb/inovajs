@@ -36,6 +36,20 @@ const projects = [
     image: "/lovable-uploads/a3c1f3b1-c896-44eb-8f91-e0fdf9bf4cce.png",
     link: "https://disasterreport.netlify.app",
   },
+  {
+    id: 5,
+    title: "Dra. Adna Boaventura",
+    description: "Landing Page profissional para advocacia, apresentando serviços jurídicos especializados",
+    image: "/images/adna.png",
+    link: "https://draadna.netlify.app",
+  },
+  {
+    id: 6,
+    title: "Bruna Boaventura",
+    description: "Portfólio profissional de analista de sistemas, destacando projetos e habilidades",
+    image: "/images/brunaboaventura.png",
+    link: "https://brunaluiza.vercel.app",
+  },
 ];
 
 export const Portfolio = () => {
