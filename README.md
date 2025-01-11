@@ -1,69 +1,117 @@
-# Welcome to your Lovable project
+# inova.js - Transformando sua Presença Digital
 
-## Project info
+![Licença](https://img.shields.io/badge/licença-MIT-blue.svg)
+![Versão React](https://img.shields.io/badge/react-18.3.1-blue.svg)
+![TypeScript](https://img.shields.io/badge/typescript-5.5.3-blue.svg)
 
-**URL**: https://lovable.dev/projects/a5b46b02-f114-4945-afb7-a250f8a1bc1d
+Somos uma empresa especializada em transformar a presença digital do seu negócio. Combinamos tecnologia de ponta com design moderno para criar soluções que não apenas impressionam, mas também geram resultados.
 
-## How can I edit this code?
+## 🎯 Nossos Serviços
 
-There are several ways of editing your application.
+### 🌐 Sites e Lojas Online
+- Desenvolvimento de e-commerces completos
+- Sites institucionais modernos
+- Plataformas personalizadas que vendem e encantam
+- Integrações com sistemas de pagamento e gestão
 
-**Use Lovable**
+### 📱 Landing Pages
+- Páginas de alta conversão
+- Design atraente e responsivo
+- Otimização para captação de leads
+- Integrações com ferramentas de marketing
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a5b46b02-f114-4945-afb7-a250f8a1bc1d) and start prompting.
+### 🍽️ Cardápios Online
+- Soluções práticas para restaurantes
+- Interface intuitiva para clientes
+- Sistema de pedidos integrado
+- Gestão simplificada de cardápio
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📊 Dashboards em Power BI
+- Transformação de dados em insights
+- Painéis personalizados
+- Visualização clara de indicadores
+- Suporte à tomada de decisão
 
-**Use your preferred IDE**
+### 💡 Consultorias Personalizadas
+- Otimização de processos internos
+- Aumento de eficiência operacional
+- Soluções tecnológicas sob medida
+- Melhoria de produtividade
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Nossa Stack Tecnológica
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend:** React 18.3
+- **Estilização:** Tailwind CSS + shadcn/ui
+- **Tipagem:** TypeScript
+- **Animações:** Framer Motion
+- **Roteamento:** React Router DOM
+- **Formulários:** React Hook Form + Zod
+- **Notificações:** Sonner
+- **Qualidade de Código:** ESLint
 
-Follow these steps:
+## 💫 Diferenciais
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 🎨 Design moderno e responsivo
+- ⚡ Performance otimizada
+- 🔒 Código seguro e bem estruturado
+- 📱 Experiência perfeita em todos os dispositivos
+- 🌙 Modo claro/escuro automático
+- ✨ Animações suaves e profissionais
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Começando um Projeto
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Pré-requisitos
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- Node.js (versão LTS recomendada)
+- npm ou yarn
+
+### Instalação
+
+1. Clone o repositório:
+```bash
+git clone <URL_DO_REPOSITÓRIO>
+cd inovajs
 ```
 
-**Edit a file directly in GitHub**
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+```
 
-**Use GitHub Codespaces**
+4. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📦 Scripts Disponíveis
 
-## What technologies are used for this project?
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção
+- `npm run build:dev` - Gera build de desenvolvimento
+- `npm run preview` - Visualiza a build de produção
+- `npm run lint` - Executa verificação de código
 
-This project is built with .
+## 🤝 Como Contribuir
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Faça Push para a Branch (`git push origin feature/NovaFuncionalidade`)
+5. Abra um Pull Request
 
-## How can I deploy this project?
+## 📄 Licença
 
-Simply open [Lovable](https://lovable.dev/projects/a5b46b02-f114-4945-afb7-a250f8a1bc1d) and click on Share -> Publish.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## I want to use a custom domain - is that possible?
+---
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Feito com ❤️ pela equipe inova.js | Transformando ideias em realidade digital
