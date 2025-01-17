@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const WhatsAppButton = () => {
   return (
     <motion.a
-      href="https://w.app/inovajs"
+      href="https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-50"

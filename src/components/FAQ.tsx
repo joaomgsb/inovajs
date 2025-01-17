@@ -104,7 +104,7 @@ export const FAQ = () => {
             className="mt-12 text-center"
           >
             <a
-              href="https://w.app/inovajs"
+              href="https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary hover:bg-primary-hover text-white font-medium px-8 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-primary/25"

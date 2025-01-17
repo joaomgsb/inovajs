@@ -55,7 +55,7 @@ export const Hero = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white group transition-all duration-300"
-              onClick={() => window.location.href = 'https://w.app/inovajs'}
+              onClick={() => window.location.href = 'https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F'}
             >
               Solicitar Orçamento
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
