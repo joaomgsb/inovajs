@@ -1,0 +1,11 @@
+# Permitir todos os crawlers acessarem o site
+User-agent: *
+Allow: /
+
+# Permitir Facebook crawler
+User-agent: facebookexternalhit
+Disallow:
+
+# Permitir Twitter crawler
+User-agent: Twitterbot
+Disallow:
