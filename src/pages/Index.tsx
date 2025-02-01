@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
@@ -11,23 +13,66 @@ import { Footer } from "@/components/Footer";
 import { Testimonials } from "@/components/Testimonials";
 import { Differentials } from "@/components/Differentials";
 import { Pricing } from "@/components/Pricing";
-import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
+  useEffect(() => {
+    // Adiciona o Google Tag Manager dinamicamente
+    const gtmScript = document.createElement("script");
+    gtmScript.innerHTML = `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MLTTJ68N');
+    `;
+    document.head.appendChild(gtmScript);
+
+    // Adiciona o Google Analytics (GA4) dinamicamente
+    const gaScript = document.createElement("script");
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-BXR1114VLL";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    const gaInlineScript = document.createElement("script");
+    gaInlineScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BXR1114VLL');
+    `;
+    document.head.appendChild(gaInlineScript);
+  }, []);
+
   return (
     <>
       <Helmet>
-        <title>Inova Creator Hub - Plataforma de Inovação e Criação</title>
-        <meta name="description" content="Descubra o Inova Creator Hub - sua plataforma completa para inovação e desenvolvimento de projetos criativos. Conecte-se com criadores, desenvolva ideias e transforme sua visão em realidade." />
+        <title>Inova.js - Plataforma de Inovação e Criação</title>
+        <meta name="description" content="Inova.js - Sua plataforma completa para inovação e desenvolvimento de projetos criativos. Conecte-se com criadores, desenvolva ideias e transforme sua visão em realidade." />
+        <meta name="author" content="Inova.js" />
         <meta name="keywords" content="inovação, criatividade, hub de criadores, desenvolvimento de projetos, tecnologia, colaboração" />
-        <meta property="og:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
-        <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
+
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://inovajs.com.br" />
+        <meta property="og:title" content="Inova.js - Plataforma de Inovação e Criação" />
+        <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
+        <meta property="og:image" content="https://inovajs.com.br/images/inovajs.png?v=1" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
+        <meta name="twitter:title" content="Inova.js - Plataforma de Inovação e Criação" />
         <meta name="twitter:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
-        <link rel="canonical" href={window.location.href} />
+        <meta name="twitter:image" content="https://inovajs.com.br/images/inovajs.png?v=1" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://inovajs.com.br" />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
       </Helmet>
+
       <main className="bg-background text-foreground">
         <Hero />
         <About />
