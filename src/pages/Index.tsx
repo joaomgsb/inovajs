@@ -8,6 +8,9 @@ import { FAQ } from "@/components/FAQ";
 import { Portfolio } from "@/components/Portfolio";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Footer } from "@/components/Footer";
+import { Testimonials } from "@/components/Testimonials";
+import { Differentials } from "@/components/Differentials";
+import { Pricing } from "@/components/Pricing";
 import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
@@ -30,9 +33,12 @@ const Index = () => {
         <About />
         <Features />
         <Portfolio />
+        <Differentials />
+        <Testimonials />
         <Reasons />
         <Stats />
         <Contact />
+        <Pricing />
         <FAQ />
         <WhatsAppButton />
         <Footer />

@@ -53,15 +53,16 @@ export const Hero = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Button
-              size="lg"
-              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white group transition-all duration-300"
+              size="xl"
+              variant="cta"
+              className="whitespace-normal sm:whitespace-nowrap h-[70px] sm:h-auto animate-[bounce_10s_cubic-bezier(0.4,0,0.2,1)_infinite] hover:brightness-110 transition-all duration-700 ease-in-out"
               onClick={() => window.location.href = 'https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F'}
             >
-              Solicitar Orçamento
+              Solicite um orçamento e ganhe análise gratuita
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
-              size="lg"
+              size="xl"
               variant="outline"
               className="border-secondary text-secondary hover:bg-secondary/10 group transition-all duration-300"
               onClick={() => {
