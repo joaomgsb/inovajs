@@ -185,10 +185,10 @@ export const Features = () => {
           className="text-center mt-8 md:mt-16"
         >
           <Button
-            variant="cta"
+            variant="success"
             size="lg"
-            className="group text-sm md:text-base animate-[bounce_10s_cubic-bezier(0.4,0,0.2,1)_infinite] hover:brightness-110 transition-all duration-700 ease-in-out"
-            onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group text-sm md:text-base animate-[bounce_10s_cubic-bezier(0.4,0,0.2,1)_infinite] hover:brightness-110 transition-all duration-700 ease-in-out px-8 py-6"
+            onClick={() => window.open('https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F', '_blank')}
           >
             Solicite um Orçamento Gratuito
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

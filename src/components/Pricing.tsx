@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Rocket, Target, ShieldCheck } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { BackgroundPattern } from "@/components/ui/background-pattern";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -64,28 +64,6 @@ const servicePacks = [
   }
 ];
 
-const uniqueValue = {
-  title: "Por que a Inova.js é diferente?",
-  description: "Combinamos tecnologia de ponta com estratégia de negócios para criar soluções que realmente impactam seus resultados",
-  points: [
-    {
-      icon: Rocket,
-      title: "Desenvolvimento Ágil",
-      description: "Entrega 3x mais rápida que agências tradicionais com nossa metodologia própria"
-    },
-    {
-      icon: Target,
-      title: "Foco em Conversão",
-      description: "Sites otimizados para converter visitantes em clientes, com média de 150% de aumento"
-    },
-    {
-      icon: ShieldCheck,
-      title: "Garantia de Resultados",
-      description: "Único estúdio que oferece garantia de satisfação de 30 dias ou seu dinheiro de volta"
-    }
-  ]
-};
-
 export const Pricing = () => {
   return (
     <section id="pacotes" className="py-12 md:py-24 bg-background relative overflow-hidden">
@@ -104,29 +82,10 @@ export const Pricing = () => {
               Pacotes de Serviços
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
-            Escolha o plano ideal para transformar sua presença digital com nossas soluções integradas
+          <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
+            Escolha o plano que melhor se adapta às suas necessidades
           </p>
         </motion.div>
-
-        {/* Unique Value Proposition */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16 px-4">
-          {uniqueValue.points.map((point, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-background-dark/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-white/5"
-            >
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                {<point.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />}
-              </div>
-              <h3 className="text-lg md:text-xl font-semibold text-white mb-2">{point.title}</h3>
-              <p className="text-sm md:text-base text-gray-400">{point.description}</p>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Service Packs */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16 px-4">
@@ -167,14 +126,23 @@ export const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto">
-                <Button 
-                  variant={pack.highlight ? "default" : "outline"}
+              <div className="flex justify-center">
+                <Button
+                  variant="success"
                   size="lg"
-                  className="w-full text-sm md:text-base"
-                  onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="w-full max-w-[240px] py-6 text-base md:text-lg font-semibold"
+                  onClick={() => {
+                    if (pack.name === "Criação de Site + SEO Inicial + Identidade Visual") {
+                      window.open('https://wa.me/5531999930883?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20%22Cria%C3%A7%C3%A3o%20de%20Site%20%2B%20SEO%20Inicial%20%2B%20Identidade%20Visual%22', '_blank');
+                    } else if (pack.name === "Criação de Site + SEO Avançado + Gestão de Tráfego + Identidade Visual") {
+                      window.open('https://wa.me/5531999930883?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20%22Cria%C3%A7%C3%A3o%20de%20Site%20%2B%20SEO%20Avan%C3%A7ado%20%2B%20Gest%C3%A3o%20de%20Tr%C3%A1fego%20%2B%20Identidade%20Visual%22', '_blank');
+                    } else if (pack.name === "Enterprise - Solução Digital Completa para Empresas") {
+                      window.open('https://wa.me/5531999930883?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20%22Enterprise%22', '_blank');
+                    }
+                  }}
                 >
-                  Solicitar Proposta
+                  <span>Solicitar Proposta</span>
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
             </motion.div>
