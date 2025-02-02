@@ -16,7 +16,7 @@ import { Pricing } from "@/components/Pricing";
 
 const Index = () => {
   useEffect(() => {
-    // Adiciona o Google Tag Manager dinamicamente
+    // Adiciona o Google Tag Manager dinamicamente (head)
     const gtmScript = document.createElement("script");
     gtmScript.innerHTML = `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -41,6 +41,12 @@ const Index = () => {
       gtag('config', 'G-BXR1114VLL');
     `;
     document.head.appendChild(gaInlineScript);
+
+    // Adiciona o Google Tag Manager (noscript) dinamicamente no body
+    const noscriptGTM = document.createElement("noscript");
+    noscriptGTM.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLTTJ68N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    document.body.insertBefore(noscriptGTM, document.body.firstChild);
   }, []);
 
   return (
