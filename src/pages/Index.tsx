@@ -94,7 +94,6 @@ const Index = () => {
         <Contact />
         <Pricing />
         <FAQ />
-        <WhatsAppButton />
         <Footer />
       </main>
     </>
