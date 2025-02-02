@@ -1,31 +1,26 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { createHtmlPlugin } from "vite-plugin-html";
+import { componentTagger } from "lovable-tagger";
 
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "/", // Garante caminhos corretos no Netlify
+
   build: {
-    outDir: "dist",
-    minify: false, 
+    outDir: "dist", // Netlify usa "dist" como diretório de publicação
   },
+
   server: {
-    host: "0.0.0.0",
+    host: "0.0.0.0", // Usa IPv4 para evitar problemas no Netlify
     port: 8080,
   },
+
   plugins: [
     react(),
-    createHtmlPlugin({
-      minify: false,
-      inject: {
-        data: {
-          title: "Inova Creator Hub - Plataforma de Inovação e Criação",
-          description: "Sua plataforma completa para inovação e desenvolvimento de projetos criativos",
-          image: "https://inovajs.com.br/og-image.png",
-        },
-      },
-    }),
-  ],
+    mode === "development" ? componentTagger() : null, // Carrega apenas no dev
+  ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
