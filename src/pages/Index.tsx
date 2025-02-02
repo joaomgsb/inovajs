@@ -59,7 +59,7 @@ const Index = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://inovajs.com.br" />
+        <meta property="og:url" content="https://inovajs.com.br/?updated=1" />
         <meta property="og:title" content="Inova.js - Plataforma de Inovação e Criação" />
         <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
         <meta property="og:image" content="https://inovajs.com.br/images/inovajs.png" />
