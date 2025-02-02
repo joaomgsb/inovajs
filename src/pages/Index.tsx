@@ -15,6 +15,9 @@ import { Differentials } from "@/components/Differentials";
 import { Pricing } from "@/components/Pricing";
 
 const Index = () => {
+  const timestamp = new Date().getTime();
+  const ogImage = `https://inovajs.com.br/images/inovajs.png?v=${timestamp}`;
+
   useEffect(() => {
     // Adiciona o Google Tag Manager dinamicamente (head)
     const gtmScript = document.createElement("script");
@@ -52,27 +55,27 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Inova.js - Plataforma de Inovação e Criação</title>
-        <meta name="description" content="Inova.js - Sua plataforma completa para inovação e desenvolvimento de projetos criativos. Conecte-se com criadores, desenvolva ideias e transforme sua visão em realidade." />
+        <title>Inova Creator Hub - Plataforma de Inovação e Criação</title>
+        <meta name="description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos" />
         <meta name="author" content="Inova.js" />
         <meta name="keywords" content="inovação, criatividade, hub de criadores, desenvolvimento de projetos, tecnologia, colaboração" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://inovajs.com.br" />
-        <meta property="og:title" content="Inova.js - Plataforma de Inovação e Criação" />
-        <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
-        <meta property="og:image" content="https://inovajs.com.br/images/inovajs.png" />
-        <meta property="og:image:secure_url" content="https://inovajs.com.br/images/inovajs.png" />
+        <meta property="og:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
+        <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Inova.js" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Inova.js - Plataforma de Inovação e Criação" />
-        <meta name="twitter:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
-        <meta name="twitter:image" content="https://inovajs.com.br/images/inovajs.png" />
+        <meta name="twitter:title" content="Inova Creator Hub - Plataforma de Inovação e Criação" />
+        <meta name="twitter:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos" />
+        <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content="Prévia do site Inova.js" />
 
         {/* Canonical URL */}

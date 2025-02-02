@@ -16,12 +16,12 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     createHtmlPlugin({
-      minify: false, 
+      minify: false,
       inject: {
         data: {
-          title: "Inova.js - Plataforma de Inovação e Criação",
-          description: "Sua plataforma completa para inovação e desenvolvimento de projetos criativos.",
-          image: "https://inovajs.com.br/images/inovajs.png",
+          title: "Inova Creator Hub - Plataforma de Inovação e Criação",
+          description: "Sua plataforma completa para inovação e desenvolvimento de projetos criativos",
+          image: "https://inovajs.com.br/og-image.png",
         },
       },
     }),
