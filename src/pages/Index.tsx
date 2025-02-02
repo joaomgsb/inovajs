@@ -56,15 +56,18 @@ const Index = () => {
         <meta property="og:url" content="https://inovajs.com.br" />
         <meta property="og:title" content="Inova.js - Plataforma de Inovação e Criação" />
         <meta property="og:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
-        <meta property="og:image" content="https://inovajs.com.br/images/inovajs.png?v=1" />
+        <meta property="og:image" content="https://inovajs.com.br/images/inovajs.png" />
+        <meta property="og:image:secure_url" content="https://inovajs.com.br/images/inovajs.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Inova.js" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Inova.js - Plataforma de Inovação e Criação" />
         <meta name="twitter:description" content="Sua plataforma completa para inovação e desenvolvimento de projetos criativos." />
-        <meta name="twitter:image" content="https://inovajs.com.br/images/inovajs.png?v=1" />
+        <meta name="twitter:image" content="https://inovajs.com.br/images/inovajs.png" />
+        <meta name="twitter:image:alt" content="Prévia do site Inova.js" />
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://inovajs.com.br" />
