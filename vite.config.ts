@@ -1,26 +1,31 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
+import { createHtmlPlugin } from "vite-plugin-html";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // Garante caminhos corretos no Netlify
-
+  base: "/",
   build: {
-    outDir: "dist", // Netlify usa "dist" como diretório de publicação
+    outDir: "dist",
+    minify: false, 
   },
-
   server: {
-    host: "0.0.0.0", // Usa IPv4 para evitar problemas no Netlify
+    host: "0.0.0.0",
     port: 8080,
   },
-
   plugins: [
     react(),
-    mode === "development" ? componentTagger() : null, // Carrega apenas no dev
-  ].filter(Boolean),
-
+    createHtmlPlugin({
+      minify: false, 
+      inject: {
+        data: {
+          title: "Inova.js - Plataforma de Inovação e Criação",
+          description: "Sua plataforma completa para inovação e desenvolvimento de projetos criativos.",
+          image: "https://inovajs.com.br/images/inovajs.png",
+        },
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
