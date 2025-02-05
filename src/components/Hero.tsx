@@ -55,7 +55,7 @@ export const Hero = () => {
             <Button
               size="xl"
               variant="success"
-              className="whitespace-normal sm:whitespace-nowrap h-[70px] sm:h-auto animate-[bounce_10s_cubic-bezier(0.4,0,0.2,1)_infinite] hover:brightness-110 transition-all duration-700 ease-in-out"
+              className="whitespace-normal sm:whitespace-nowrap h-[70px] sm:h-auto text-[0.9rem] xs:text-base sm:text-base animate-[bounce_10s_cubic-bezier(0.4,0,0.2,1)_infinite] hover:brightness-110 transition-all duration-700 ease-in-out"
               onClick={() => window.location.href = 'https://wa.me/553199930883?text=Ol%C3%A1!%20Poderiam%20me%20enviar%20um%20or%C3%A7amento%20para%20desenvolvimento%20de%20site%3F'}
             >
               Solicite um orçamento e ganhe análise gratuita
