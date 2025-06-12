@@ -11,6 +11,31 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+const featuredProject = {
+  id: 0,
+  title: "Scarfit",
+  description: "Plataforma de fitness personalizada para influenciador digital com +160k seguidores",
+  longDescription: "Desenvolvimento de uma plataforma completa de fitness e bem-estar para João Scar (@joaoscar_), influenciador digital com mais de 160 mil seguidores no Twitter. O projeto incluiu sistema de treinos personalizados, acompanhamento nutricional e comunidade exclusiva para seguidores.",
+  image: "/images/logo.jpeg",
+  link: "https://scarfit.com.br",
+  technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Stripe", "AWS"],
+  results: ["Aumento de 300% no engajamento", "Conversão de 25% seguidores para clientes", "Plataforma com 10k+ usuários ativos", "Receita recorrente de R$ 50k/mês"],
+  category: "Plataforma Digital",
+  testimonial: {
+    content: "A plataforma superou todas as minhas expectativas! Consegui monetizar minha audiência de forma profissional e escalável. Recomendo 100%!",
+    author: "João Scar",
+    role: "Influenciador Digital • 160k+ seguidores"
+  },
+  duration: "14 semanas",
+  rating: 5,
+  featured: true,
+  socialProof: {
+    followers: "160k+",
+    engagement: "15%",
+    platform: "Twitter"
+  }
+};
+
 const projects = [
   {
     id: 1,
@@ -200,6 +225,146 @@ export const Portfolio = () => {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Featured Project Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="bg-gradient-to-r from-primary to-accent text-white border-none mb-4 text-lg">
+              <Trophy className="w-4 h-4 mr-2" />
+              Projeto em Destaque
+            </Badge>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Desenvolvido para Influenciador com +160k Seguidores
+            </h3>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Criamos uma plataforma completa para João Scar, transformando sua audiência em uma comunidade engajada e monetizada
+            </p>
+          </div>
+
+          <Card className="border-0 overflow-hidden bg-gradient-to-br from-primary/10 via-background-dark/80 to-accent/10 backdrop-blur-sm max-w-7xl mx-auto">
+            <CardContent className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                {/* Featured Project Image */}
+                <div className="relative group h-[500px] overflow-hidden rounded-xl">
+                  <img
+                    src={featuredProject.image}
+                    alt={featuredProject.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40" />
+                  
+                  {/* Social Proof Badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-800">
+                        {featuredProject.socialProof.followers} seguidores
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-4 left-4">
+                    <Badge 
+                      variant="secondary"
+                      className="bg-gradient-to-r from-primary to-accent text-white border-none shadow-lg text-lg px-4 py-2"
+                    >
+                      {featuredProject.category}
+                    </Badge>
+                  </div>
+                </div>
+                
+                {/* Featured Project Info */}
+                <div className="space-y-8">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-4xl font-bold text-white">{featuredProject.title}</h3>
+                      <div className="flex">
+                        {[...Array(featuredProject.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-xl text-gray-300 leading-relaxed">{featuredProject.longDescription}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-3">Tecnologias Utilizadas</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {featuredProject.technologies.map((tech, index) => (
+                        <Badge key={index} variant="outline" className="text-lg px-3 py-1">{tech}</Badge>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-3">Resultados Excepcionais</h4>
+                    <ul className="space-y-3">
+                      {featuredProject.results.map((result, index) => (
+                        <li key={index} className="flex items-center text-lg text-gray-300">
+                          <TrendingUp className="w-5 h-5 text-green-500 mr-3" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Featured Testimonial */}
+                  <div className="bg-gradient-to-r from-white/10 to-white/5 p-6 rounded-xl border border-white/20">
+                    <p className="text-xl text-white italic mb-4">"{featuredProject.testimonial.content}"</p>
+                                         <div className="flex items-center gap-4">
+                       <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
+                         <img
+                           src="/images/joao.jpeg"
+                           alt="João Scar"
+                           className="w-full h-full object-cover"
+                         />
+                       </div>
+                       <div>
+                         <div className="text-lg font-semibold text-primary">{featuredProject.testimonial.author}</div>
+                         <div className="text-gray-400">{featuredProject.testimonial.role}</div>
+                       </div>
+                     </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-4">
+                    <div className="text-lg text-gray-400">
+                      Duração: <span className="text-primary font-semibold">{featuredProject.duration}</span>
+                    </div>
+                    <Button
+                      variant="default"
+                      size="lg"
+                      className="group bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 transition-all duration-300"
+                      onClick={() => window.open(featuredProject.link, '_blank')}
+                    >
+                      Visitar Scarfit
+                      <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Outros Projetos */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Outros Projetos de Sucesso
+          </h3>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Conheça mais casos de sucesso que transformaram negócios e carreiras
+          </p>
         </motion.div>
         
         <Carousel className="w-full max-w-6xl mx-auto">

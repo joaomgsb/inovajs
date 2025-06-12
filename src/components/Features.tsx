@@ -80,7 +80,7 @@ const features = [
 ];
 
 const stats = [
-  { value: "150+", label: "Projetos Entregues" },
+  { value: "50+", label: "Projetos Entregues" },
   { value: "98%", label: "Clientes Satisfeitos" },
   { value: "24h", label: "Suporte Técnico" },
   { value: "5★", label: "Avaliação Média" }

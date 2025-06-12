@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 const achievements = [
   {
-    value: "150+",
+    value: "50+",
     label: "Projetos Entregues",
     description: "Experiência comprovada em diversos setores"
   },
@@ -15,7 +15,7 @@ const achievements = [
     description: "Avaliação média dos nossos clientes"
   },
   {
-    value: "5+",
+    value: "1+",
     label: "Anos no Mercado",
     description: "Construindo soluções inovadoras"
   },
@@ -42,11 +42,11 @@ const teamMembers = [
     description: "Sou apaixonado por transformar sonhos em realidades. Como cofundador e Head Comercial, lidero a equipe comercial e gerencio projetos, garantindo a entrega de soluções inovadoras."
   },
   {
-    name: "Guilherme Ribeiro",
-    role: "Graphic Designer",
-    image: "/images/team/Gui.jpg",
-    skills: ["Photoshop", "Illustrator", "Figma"],
-    description: "Tenho o prazer de transformar insights em designs profissionais. Como Designer Gráfico da Inova.js, cuido dos projetos que envolvem a criação de elementos gráficos, desde identidades visuais até artes e posts para as mídias sociais."
+    name: "Gabriel Maciel",
+    role: "CPO & CO-Fundador",
+    image: "/images/team/gabriel.jpeg",
+    skills: ["Desenvolvimento de Produtos", "Tecnologia", "Visão de Negócio"],
+    description: "Sendo CPO e Co-Fundador, analiso resultados e penso em soluções rapidamente. Para mim, a tecnologia é a chave para construir conexões, ampliar pensamentos e materializar grandes ideias."
   }
 ];
 
@@ -125,7 +125,7 @@ export const About = () => {
               <div className="absolute -bottom-6 -right-6 bg-background-dark/95 backdrop-blur-sm p-4 rounded-xl border border-primary/20 shadow-xl">
                 <div className="flex items-center gap-2">
                   <Code className="w-5 h-5 text-primary" />
-                  <span className="text-white font-semibold">Desde 2019</span>
+                  <span className="text-white font-semibold">Desde 2024</span>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ export const About = () => {
             </p>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-              Com mais de 5 anos de experiência no mercado, já ajudamos dezenas de empresas 
+              Iniciando nossa jornada no mercado com um ano de experiência, já ajudamos diversas empresas 
               a alcançarem seus objetivos através de soluções digitais inovadoras e eficientes.
             </p>
 
