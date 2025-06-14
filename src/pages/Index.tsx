@@ -12,7 +12,6 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Footer } from "@/components/Footer";
 import { Testimonials } from "@/components/Testimonials";
 import { Differentials } from "@/components/Differentials";
-import { Pricing } from "@/components/Pricing";
 
 const Index = () => {
   useEffect(() => {
@@ -92,7 +91,6 @@ const Index = () => {
         <Reasons />
         <Stats />
         <Contact />
-        <Pricing />
         <FAQ />
         <Footer />
       </main>
