@@ -21,11 +21,6 @@ const featuredProject = {
   technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Stripe", "AWS"],
   results: ["Aumento de 300% no engajamento", "Conversão de 25% seguidores para clientes", "Plataforma com 10k+ usuários ativos", "Receita recorrente de R$ 50k/mês"],
   category: "Plataforma Digital",
-  testimonial: {
-    content: "A plataforma superou todas as minhas expectativas! Consegui monetizar minha audiência de forma profissional e escalável. Recomendo 100%!",
-    author: "João Scar",
-    role: "Influenciador Digital • 160k+ seguidores"
-  },
   duration: "14 semanas",
   rating: 5,
   featured: true,
@@ -47,11 +42,6 @@ const projects = [
     technologies: ["React", "Next.js", "Tailwind CSS", "Strapi CMS"],
     results: ["150% aumento em vendas", "60% mais leads", "Redução de 40% no bounce rate"],
     category: "E-commerce",
-    testimonial: {
-      content: "A plataforma superou nossas expectativas. As vendas aumentaram significativamente!",
-      author: "Carlos Silva",
-      role: "Diretor Comercial"
-    },
     duration: "8 semanas",
     rating: 5
   },
@@ -65,11 +55,6 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     results: ["200% aumento em vendas", "Redução de 30% em custos operacionais", "95% satisfação dos clientes"],
     category: "E-commerce",
-    testimonial: {
-      content: "Nossa loja online se transformou completamente. Resultados impressionantes!",
-      author: "Ana Paula",
-      role: "CEO"
-    },
     duration: "12 semanas",
     rating: 5
   },
@@ -83,11 +68,6 @@ const projects = [
     technologies: ["React", "Gatsby", "GraphQL", "Google Analytics"],
     results: ["300% mais leads qualificados", "Primeira página do Google", "Taxa de conversão de 12%"],
     category: "Landing Page",
-    testimonial: {
-      content: "O ROI foi excepcional. A página converteu muito além do esperado.",
-      author: "Roberto Mendes",
-      role: "Proprietário"
-    },
     duration: "4 semanas",
     rating: 5
   },
@@ -101,11 +81,6 @@ const projects = [
     technologies: ["React", "Python", "TensorFlow", "AWS"],
     results: ["Monitoramento de 500+ áreas", "Tempo de resposta reduzido em 60%", "98% precisão nas previsões"],
     category: "Aplicação Web",
-    testimonial: {
-      content: "A plataforma revolucionou nossa capacidade de resposta a emergências.",
-      author: "Dra. Maria Santos",
-      role: "Coordenadora de Defesa Civil"
-    },
     duration: "16 semanas",
     rating: 5
   },
@@ -119,11 +94,6 @@ const projects = [
     technologies: ["React", "TypeScript", "Tailwind CSS", "Calendly"],
     results: ["250% mais agendamentos", "Aumento de 180% em leads", "45% de conversão em clientes"],
     category: "Site Institucional",
-    testimonial: {
-      content: "O retorno sobre o investimento foi extraordinário. Superou todas as expectativas.",
-      author: "Dra. Adna Boaventura",
-      role: "Advogada"
-    },
     duration: "6 semanas",
     rating: 5
   },
@@ -137,11 +107,6 @@ const projects = [
     technologies: ["Next.js", "Framer Motion", "Three.js", "Vercel"],
     results: ["90% mais contatos profissionais", "5 ofertas de emprego", "Portfolio referência"],
     category: "Portfólio",
-    testimonial: {
-      content: "Minha presença online mudou completamente. Resultados surpreendentes!",
-      author: "Bruna Boaventura",
-      role: "Analista de Sistemas"
-    },
     duration: "4 semanas",
     rating: 5
   },
@@ -314,24 +279,6 @@ export const Portfolio = () => {
                     </ul>
                   </div>
 
-                  {/* Featured Testimonial */}
-                  <div className="bg-gradient-to-r from-white/10 to-white/5 p-6 rounded-xl border border-white/20">
-                    <p className="text-xl text-white italic mb-4">"{featuredProject.testimonial.content}"</p>
-                                         <div className="flex items-center gap-4">
-                       <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
-                         <img
-                           src="/images/joao.jpeg"
-                           alt="João Scar"
-                           className="w-full h-full object-cover"
-                         />
-                       </div>
-                       <div>
-                         <div className="text-lg font-semibold text-primary">{featuredProject.testimonial.author}</div>
-                         <div className="text-gray-400">{featuredProject.testimonial.role}</div>
-                       </div>
-                     </div>
-                  </div>
-
                   <div className="flex items-center justify-between pt-4">
                     <div className="text-lg text-gray-400">
                       Duração: <span className="text-primary font-semibold">{featuredProject.duration}</span>
@@ -431,15 +378,6 @@ export const Portfolio = () => {
                                 </li>
                               ))}
                             </ul>
-                          </div>
-
-                          {/* Testimonial */}
-                          <div className="bg-white/5 p-4 rounded-lg">
-                            <p className="text-lg text-gray-300 italic mb-2">"{project.testimonial.content}"</p>
-                            <div className="text-base">
-                              <span className="text-primary font-medium">{project.testimonial.author}</span>
-                              <span className="text-gray-400"> • {project.testimonial.role}</span>
-                            </div>
                           </div>
 
                           <div className="flex items-center justify-between">
