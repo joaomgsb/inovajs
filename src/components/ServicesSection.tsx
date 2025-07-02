@@ -34,8 +34,6 @@ const services = [
       "Sistemas personalizados"
     ],
     technologies: ["React", "Next.js", "TypeScript", "Node.js"],
-    price: "A partir de R$ 2.500",
-    duration: "2-8 semanas"
   },
   {
     id: 2,
@@ -50,8 +48,6 @@ const services = [
       "Painel administrativo"
     ],
     technologies: ["Shopify", "WooCommerce", "Stripe", "PayPal"],
-    price: "A partir de R$ 5.000",
-    duration: "4-12 semanas"
   },
   {
     id: 3,
@@ -66,8 +62,6 @@ const services = [
       "SEO integrado"
     ],
     technologies: ["Responsive Design", "PWA", "AMP", "CSS Grid"],
-    price: "Incluído em todos os projetos",
-    duration: "Padrão"
   },
   {
     id: 4,
@@ -82,8 +76,6 @@ const services = [
       "Integração com CRM"
     ],
     technologies: ["WordPress", "Headless CMS", "SEO", "Analytics"],
-    price: "A partir de R$ 3.500",
-    duration: "3-6 semanas"
   },
   {
     id: 5,
@@ -98,8 +90,6 @@ const services = [
       "Blog jurídico integrado"
     ],
     technologies: ["WordPress", "LGPD Compliance", "SEO Jurídico"],
-    price: "A partir de R$ 4.000",
-    duration: "4-8 semanas"
   },
   {
     id: 6,
@@ -114,8 +104,6 @@ const services = [
       "Monitoramento contínuo"
     ],
     technologies: ["Google Analytics", "Search Console", "PageSpeed"],
-    price: "A partir de R$ 1.500",
-    duration: "2-4 semanas"
   },
   {
     id: 7,
@@ -130,8 +118,6 @@ const services = [
       "Monitoramento de segurança"
     ],
     technologies: ["HTTPS", "Cloudflare", "Security Headers"],
-    price: "A partir de R$ 800",
-    duration: "1-2 semanas"
   },
   {
     id: 8,
@@ -146,8 +132,6 @@ const services = [
       "Automação de relatórios e processos de dados"
     ],
     technologies: ["Power BI", "Python", "SQL", "Tableau"],
-    price: "A partir de R$ 3.000",
-    duration: "2-6 semanas",
     specialist: "Bruna Boaventura"
   },
   {
@@ -163,8 +147,6 @@ const services = [
       "Análise de tendências"
     ],
     technologies: ["Power BI", "Tableau", "Excel Avançado"],
-    price: "A partir de R$ 4.000",
-    duration: "3-8 semanas",
     specialist: "Bruna Boaventura"
   },
   {
@@ -182,8 +164,6 @@ const services = [
       "Cultura de melhoria contínua com foco em entrega de valor"
     ],
     technologies: ["Scrum", "Kanban", "Lean", "Design Thinking"],
-    price: "A partir de R$ 5.000",
-    duration: "4-12 semanas"
   },
   {
     id: 11,
@@ -198,8 +178,6 @@ const services = [
       "Acompanhamento pós-implementação"
     ],
     technologies: ["Cloud Computing", "Automação", "Integração de Sistemas"],
-    price: "A partir de R$ 3.500",
-    duration: "2-8 semanas"
   },
   {
     id: 12,
@@ -214,8 +192,6 @@ const services = [
       "Implementação de soluções"
     ],
     technologies: ["BPM", "Automação", "Lean Six Sigma"],
-    price: "A partir de R$ 4.500",
-    duration: "3-10 semanas"
   }
 ];
 
@@ -355,17 +331,6 @@ export const ServicesSection = () => {
                               {tech}
                             </Badge>
                           ))}
-                        </div>
-                      </div>
-
-                      <div className="flex justify-between items-center mb-4 text-sm">
-                        <div>
-                          <span className="text-gray-400">Preço: </span>
-                          <span className="text-primary font-semibold">{service.price}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-400">Prazo: </span>
-                          <span className="text-white">{service.duration}</span>
                         </div>
                       </div>
 
