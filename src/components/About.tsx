@@ -100,14 +100,6 @@ const values = [
   }
 ];
 
-const testimonial = {
-  content: "A Inova.js transformou completamente nossa presença digital. A equipe é extremamente profissional e entregou além das nossas expectativas.",
-  author: "Maria Oliveira",
-  role: "CEO da TechStart",
-  company: "TechStart Solutions",
-  rating: 5
-};
-
 export const About = () => {
   return (
     <section className="py-24 relative overflow-hidden" id="sobre">
@@ -277,31 +269,11 @@ export const About = () => {
           ))}
         </div>
 
-        {/* Testimonial Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto mt-32 text-center bg-background-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10"
-        >
-          <div className="flex justify-center mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-            ))}
-          </div>
-          <p className="text-xl text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-          <div className="space-y-1">
-            <div className="font-semibold text-white">{testimonial.author}</div>
-            <div className="text-primary">{testimonial.role}</div>
-            <div className="text-sm text-gray-400">{testimonial.company}</div>
-          </div>
-        </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.4 }}
           className="mt-24 text-center"
         >
           <h3 className="text-2xl font-semibold text-white mb-6">
