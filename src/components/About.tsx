@@ -48,6 +48,13 @@ const teamMembers = [
     skills: ["Desenvolvimento de Produtos", "Tecnologia", "Visão de Negócio"],
     description: "Sendo CPO e Co-Fundador, analiso resultados e penso em soluções rapidamente. Para mim, a tecnologia é a chave para construir conexões, ampliar pensamentos e materializar grandes ideias."
   }
+  {
+    name: "Bruna Boaventura",
+    role: "Especialista em Análise de Dados e Desenvolvimento Web",
+    image: "/images/team/bruna.jpeg",
+    skills: ["Business Intelligence", "Full Stack", "Análise de Dados", "Soluções Tecnológicas"],
+    description: "Especialista em análise de dados e desenvolvimento web full stack, com foco em Business Intelligence e soluções tecnológicas inovadoras."
+  }
 ];
 
 const values = [
