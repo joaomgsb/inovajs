@@ -47,7 +47,7 @@ const teamMembers = [
     image: "/images/team/gabriel.jpeg",
     skills: ["Desenvolvimento de Produtos", "Tecnologia", "Visão de Negócio"],
     description: "Sendo CPO e Co-Fundador, analiso resultados e penso em soluções rapidamente. Para mim, a tecnologia é a chave para construir conexões, ampliar pensamentos e materializar grandes ideias."
-  }
+  },
   {
     name: "Bruna Boaventura",
     role: "Especialista em Análise de Dados e Desenvolvimento Web",
