@@ -203,32 +203,32 @@ export const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-background-dark/50 backdrop-blur-sm rounded-xl overflow-hidden group"
+                className="bg-background-dark/50 backdrop-blur-sm rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
               >
                 <div className="relative overflow-hidden">
                   <div className="group-hover:scale-105 transition-transform duration-500">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full aspect-square object-cover"
+                      className="w-full aspect-[4/3] object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60" />
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 h-auto">
                   <h4 className="text-xl font-semibold text-white mb-1">{member.name}</h4>
                   <p className="text-primary mb-3">{member.role}</p>
-                  <p className="text-gray-400 text-sm mb-4">{member.description}</p>
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{member.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {member.skills.map((skill, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
+                      <Badge key={idx} variant="outline" className="text-xs hover:bg-primary/10 transition-colors">
                         {skill}
                       </Badge>
                     ))}
