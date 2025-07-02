@@ -12,6 +12,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Footer } from "@/components/Footer";
 import { Testimonials } from "@/components/Testimonials";
 import { Differentials } from "@/components/Differentials";
+import { ServicesSection } from "@/components/ServicesSection";
 
 const Index = () => {
   useEffect(() => {
@@ -85,6 +86,7 @@ const Index = () => {
         <Hero />
         <About />
         <Features />
+        <ServicesSection />
         <Portfolio />
         <Differentials />
         <Testimonials />
