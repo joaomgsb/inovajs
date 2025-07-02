@@ -217,7 +217,7 @@ export const About = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full aspect-[4/3] object-cover"
+                      className="w-full aspect-square object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-60" />
                   </div>
