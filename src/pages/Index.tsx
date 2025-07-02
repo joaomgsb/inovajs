@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
 import { About } from "@/components/About";
 import { Reasons } from "@/components/Reasons";
@@ -85,7 +84,6 @@ const Index = () => {
       <main className="bg-background text-foreground">
         <Hero />
         <About />
-        <Features />
         <ServicesSection />
         <Portfolio />
         <Differentials />
